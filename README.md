@@ -1,8 +1,4 @@
-# React + Vite
+# Pluto Time Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Plutotime](https://github.com/forbiddenvelocity/Pluto-Time-Calculator/assets/116059615/4eddb04e-f9e2-443e-bf36-53a5c5c18973)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
