@@ -7,6 +7,7 @@ function App() {
   const [selectedDate, setSelectedDate] = useState('')
   const [sunriseTime, setSunriseTime] = useState('')
   const [sunsetTime, setSunsetTime] = useState('')
+  const [dayTime, setDayTime] = useState('')
 
   // Function to handle changes in the input fields
   const handleDateChange = (event) => {
@@ -20,6 +21,20 @@ function App() {
   const handleSunsetChange = (event) => {
     setSunsetTime(event.target.value)
   };
+
+  const handleCalculate = () => {
+    const [sunriseHour, sunriseMinute] = sunriseTime.split(":").map(Number);
+    const [sunsetHour, sunsetMinute] = sunsetTime.split(":").map(Number);
+    const sunriseMinutes = sunriseHour * 60 + sunriseMinute;
+    const sunsetMinutes = sunsetHour * 60 + sunsetMinute;
+
+    const totalMinutesDaylight = sunsetMinutes - sunriseMinutes
+
+    const prePlutoTime = (totalMinutesDaylight / 720)*24
+    const plutoTime = sunriseHour + (prePlutoTime * 60)
+
+    setDayTime(plutoTime);
+  }
 
   return (
     <>
@@ -60,6 +75,9 @@ function App() {
             />
           </div>
 
+          <button onClick={handleCalculate}>Calculate</button>
+
+          {dayTime && <p>Your Pluto Time: {dayTime} </p>}
         </div>
       </div>
       

@@ -13,11 +13,7 @@ body {
   background-image: url('./images/bg.jpg');
   background-size: cover; /* Set the background image to cover the entire container */
   background-position: center;
-}
-
-.titletext{
-  padding-right: 0%;
-
+  margin-bottom: 130px;
 }
 
 .input-container {
